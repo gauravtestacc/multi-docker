@@ -1,3 +1,3 @@
-FROM ngnix
+FROM nginx
 
-COPY ./default.cong /etc/ngnix/conf.d/default.conf
+COPY ./default.conf /etc/nginx/conf.d/default.conf
