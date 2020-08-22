@@ -19,6 +19,6 @@ after_success:
   # Push all to docker hub
   - docker push gauravlfc93/multi-client
   - docker push gauravlfc93/multi-server
+  - docker push gauravlfc93/multi-worker
   - docker push gauravlfc93/multi-nginx
-  - docker push gauravlfc93/mulit-worker
 # Tell Elastic Beanstalk to update
