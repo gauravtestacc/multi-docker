@@ -22,3 +22,15 @@ after_success:
   - docker push gauravlfc93/multi-worker
   - docker push gauravlfc93/multi-nginx
 # Tell Elastic Beanstalk to update
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: ap-south-1
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-ap-south-1-935284059124
+  bucket_path: multi-docker
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
